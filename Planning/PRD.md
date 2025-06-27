@@ -36,28 +36,30 @@ Buying food and cooking regularly is a burden. Many people want to be healthy an
 - **Clear After Cooking (P0)**: Marks recipe as done and removes from queue.
 
 ## Prioritization
+
 **P0 – Core MVP**
 - Recipe ingestion (scraper/manual)
 - Recipe usage tracking
-- Meal planning flow (w/ calendar availability insight)
-- Grocery list aggregation
-- Cooking mode with in-line quantities
+- Meal planning flow (recipe queue, grocery list, weekly planning nudges)
+- Smart shopping list with select all/none
+- Cooking queue and cooking mode with in-line quantities
 
 **P1 – Automations/Integrations**
-- Calendar integration (read-only)
-- Recipe suggestions
-- Smart shopping list organization
+- Calendar integration (read-only availability insight)
+- Recipe suggestions (swipeable recommendations)
 - Instacart export
+- Grocery list organization (e.g., grouping by aisle/type)
 
 **P2 – Generative Enhancements**
-- Recipe generation
-- Preference-based recommendations
+- Recipe generation based on preferences or pantry gaps
+- Advanced recipe recommendations using AI
 
 ## Open Questions
-- Should users be able to track pantry items or inventory?
-- Will recipes have tagging or dietary filters?
-- What platforms are we targeting first—web, iOS, both?
-- What third-party APIs exist for categorizing or organizing food items by type or grocery aisle?
+- **Pantry tracking**: ❌ Not included — too complex.
+- **Tagging/dietary filters**: ✅ Will add as a P1 feature.
+- **Platforms**: Web + mobile web only for MVP. iOS app comes later.
+  - 🛎️ Push notifications ? Web push works for mobile web—will need to investigate browser support. Native push isn’t required initially.
+- **Food-categorization APIs**: Research below.
 
 ---
 
