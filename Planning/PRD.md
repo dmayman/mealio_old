@@ -16,19 +16,19 @@ Buying food and cooking regularly is a burden. Many people want to be healthy an
 ### 1. Recipe Supply
 - **Recipe Ingestion (P0)**: Users can paste recipe URLs; app scrapes any website using metadata or parsing techniques to extract ingredients and instructions. Also supports manual entry.
 - **Recipe Recommendations (P2)**: Suggests recipes based on user preferences and pantry gaps.
-- **Recipe Usage History (P0)**: Tracks how often you use recipes and which you’ve liked for smarter future planning.
+- **Recipe Usage History (P1)**: Tracks how often you use recipes and which you’ve liked for smarter future planning.
 
 ### 2. Meal Planning
-- **Queue Recipes (P0)**: Add recipes from your saved list to a planning queue.
+- **Queue Recipes (P0)**: Add recipes from your bank to a planning queue.
 - **Auto-Generate Grocery List (P0)**: Aggregates all ingredients from planned meals into a master shopping list.
-- **Weekly Planning Nudges (P0)**: App prompts you weekly to plan meals.
+- **Weekly Planning Nudges (P1)**: App prompts you weekly to plan meals.
 - **Calendar Availability Insight (P1)**: Reads your calendar to estimate how many meals you might want to plan for, without assigning them to specific days or times.
 - **Recipe Suggestions (P1)**: Suggest meals based on your bank. Possibly “Tinder”-style swipe interface for accepting/rejecting suggestions.
 
 ### 3. Shopping
-- **Smart Shopping List (P1)**: Generates a categorized list with checkboxes for in-store use.
-- **Instacart Export (P2)**: Bulk export shopping list into Instacart or other grocery apps.
-- **Select All/None (P1)**: Easy toggling for editing and copying list content.
+- **Smart Shopping List (P0)**: Generates a categorized list with checkboxes for in-store use.
+- **Instacart Export (P0)**: Bulk export shopping list into Instacart or other grocery apps.
+- **Select All/None (P0)**: Easy toggling for editing and copying list content.
 
 ### 4. Cooking
 - **Cooking Queue (P0)**: Shows only the meals you’ve planned for the week.
