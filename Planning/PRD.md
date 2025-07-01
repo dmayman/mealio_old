@@ -1,4 +1,4 @@
-# Weekly Meal Planning App – PRD
+# Mealio – PRD
 
 ## Overview
 A meal planning tool for individuals and families to easily manage their weekly food needs—from deciding what to eat, to buying groceries, to cooking meals. The app reduces the cognitive load of grocery shopping and meal planning, helping people feel more in control of what they eat without being overwhelmed.
@@ -70,10 +70,18 @@ Next Steps:
 ## Technical Architecture
 
 ### Frontend
-- **Platform**: Web and Mobile Web (PWA-compatible)
-- **Tech stack**: React + TypeScript
-- **Routing**: Client-side routing with React Router
-- **State Management**: Lightweight global state using Zustand or Context API
+We will follow a **shared‑core, separate‑shells** approach so the same business logic powers all platforms while each surface gets a layout that feels native:
+- **Architecture**: Monorepo using Turborepo + pnpm workspaces
+- **Mobile (iOS & Android)**: React Native (Expo) in `/apps/mobile`
+  - Navigation: React Navigation (stack & tab)
+- **Web**: React (Next.js) in `/apps/web`
+  - PWA‑enabled build for desktop & mobile browsers
+- **Shared Packages**:
+  - `@mealio/core` – domain models, business logic, hooks
+  - `@mealio/ui` – cross‑platform design‑system primitives
+  - `@mealio/adapters` – thin wrappers for device capabilities (camera, notifications, file picker)
+- **State Management**: Zustand (or React Context) defined in `@mealio/core`
+
 
 ### Backend
 - **Platform**: Node.js + Express (or Fastify) for REST API
@@ -87,7 +95,7 @@ Next Steps:
   - Pros: Free, open-source, supports unit conversion, TypeScript support.
   - Responsibility: Parsed results will be normalized and stored with recipe metadata in the backend.
 
-### Grocery Categorization (Planned P1)
+### Grocery Categorization
 - Explore use of third-party tools like Supermarket API or AI-based classification methods (e.g. regex, embeddings) for mapping ingredients to store aisles or categories.
 
 ### Notifications
