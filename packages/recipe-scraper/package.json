@@ -1,0 +1,21 @@
+{
+  "name": "@mealio/recipe-scraper",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    // dev script Turborepo will look for
+    "dev": "ts-node src/index.ts",
+    // basic build (you can refine later)
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0-rc.12",
+    "sharp-recipe-parser": "^0.3.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  }
+}
