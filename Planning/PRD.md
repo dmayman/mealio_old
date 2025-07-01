@@ -55,11 +55,10 @@ Buying food and cooking regularly is a burden. Many people want to be healthy an
 - Advanced recipe recommendations using AI
 
 ## Open Questions
-- **Pantry tracking**: ❌ Not included — too complex.
-- **Tagging/dietary filters**: ✅ Will add as a P1 feature.
-- **Platforms**: Web + mobile web only for MVP. iOS app comes later.
-  - 🛎️ Push notifications ? Web push works for mobile web—will need to investigate browser support. Native push isn’t required initially.
-- **Food-categorization APIs**: Research below.
+- Should users be able to track pantry items or inventory?
+- Will recipes have tagging or dietary filters?
+- What platforms are we targeting first—web, iOS, both?
+- What third-party APIs exist for categorizing or organizing food items by type or grocery aisle?
 
 ---
 
@@ -67,3 +66,33 @@ Next Steps:
 - Define onboarding experience
 - Identify third-party APIs (e.g., recipe parsers, grocery categorization, calendar access)
 - Start with a simple weekly planning loop
+
+## Technical Architecture
+
+### Frontend
+- **Platform**: Web and Mobile Web (PWA-compatible)
+- **Tech stack**: React + TypeScript
+- **Routing**: Client-side routing with React Router
+- **State Management**: Lightweight global state using Zustand or Context API
+
+### Backend
+- **Platform**: Node.js + Express (or Fastify) for REST API
+- **Database**: PostgreSQL via Supabase or hosted on Railway
+- **Authentication**: Supabase Auth or Clerk
+- **Hosting**: Vercel or Netlify (frontend), Railway or Fly.io (backend)
+
+### Recipe Ingestion
+- **Approach**: Scrape recipe content from any URL using open-source tools or metadata parsing.
+- **Ingredient Parsing**: We will use [`sharp-recipe-parser`](https://www.npmjs.com/package/sharp-recipe-parser) to extract and structure ingredient data from recipe instructions.
+  - Pros: Free, open-source, supports unit conversion, TypeScript support.
+  - Responsibility: Parsed results will be normalized and stored with recipe metadata in the backend.
+
+### Grocery Categorization (Planned P1)
+- Explore use of third-party tools like Supermarket API or AI-based classification methods (e.g. regex, embeddings) for mapping ingredients to store aisles or categories.
+
+### Notifications
+- For planning nudges (P1), we'll investigate browser push support (Web Push API) and its limitations on mobile Safari/Chrome.
+
+---
+
+This section will evolve as implementation decisions are finalized.
