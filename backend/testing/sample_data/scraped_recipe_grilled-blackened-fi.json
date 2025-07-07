@@ -1,0 +1,53 @@
+{
+  "title": "Grilled Blackened Fish Sandwiches",
+  "total_time": 45,
+  "prep_time": 15,
+  "cook_time": 30,
+  "yields": "4 servings",
+  "ingredients": [
+    "2 teaspoons paprika",
+    "1/2 teaspoon dried oregano",
+    "1/2 teaspoon dried thyme",
+    "1/4 teaspoon onion powder",
+    "1/4 teaspoon garlic powder",
+    "1/4 teaspoon freshly ground black pepper",
+    "Large pinch cayenne pepper",
+    "4 (6-ounce; 170g) grouper, mahimahi, or other white fish fillets",
+    "Kosher salt",
+    "4 tender sandwich buns",
+    "Romaine or iceberg lettuce, for topping",
+    "Thinly sliced tomato, for topping",
+    "Mayonnaise, tartar sauce, or remoulade, for serving",
+    "8 crisply cooked bacon slices (optional)"
+  ],
+  "instructions": "Light 1 chimney full of charcoal (see note). When all charcoal is lit and covered with gray ash, pour out and arrange coals on one side of the charcoal grate to create a two-zone indirect fire . Set cooking grate in place, cover grill, and allow to preheat for 5 minutes. Clean and oil grilling grate.\nMeanwhile, in a small bowl, stir together paprika, oregano, thyme, onion powder, garlic powder, black pepper, and cayenne. Season fish fillets all over with salt, then rub each all over with spice rub.\nCook fish on hot side of grill until undersides of fillets are darkened and a thin slotted fish spatula can be slid under with little resistance, about 4 minutes. Flip fish and repeat on other side. Transfer to cooler side of grill and continue cooking until an instant-read thermometer inserted in the center registers 140\u00b0F (60\u00b0C), or until a cake tester can be inserted through center with no resistance. (The last trace of translucence in the center should just be disappearing when the fish is done.) Transfer fish to a platter to rest.\nToast buns on hot side of grill, then build sandwiches. Spread mayo (or tartar sauce or remoulade) on bottom and top buns; set fish fillets on bottom buns; top with lettuce and tomato (and bacon, if using); and close sandwiches. Serve right away.",
+  "image": "https://www.seriouseats.com/thmb/s2SncoS-sWa2DTF4K7dF8leo9Os=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__images__2017__06__20170515-grilled-fish-sandwich-vicky-wasik-5-a4582b6c7f174905abedefba744ad38b.jpg",
+  "host": "seriouseats.com",
+  "canonical_url": "https://www.seriouseats.com/grilled-blackened-fish-grouper-mahimahi-sandwiches-recipe",
+  "description": "This Florida-inspired sandwich is the definition of simple perfection: fillets of white-fleshed fish, coated in a paprika-based spice rub and grilled until dark and juicy, stuffed into soft and tender bread with classic condiments.",
+  "cuisine": "American,Southern",
+  "category": "Mains,Quick Dinners,Sandwiches,Sandwich",
+  "keywords": [
+    "fish",
+    "florida",
+    "sandwich",
+    "seafood"
+  ],
+  "nutrients": {
+    "calories": "492 kcal",
+    "carbohydrateContent": "36 g",
+    "cholesterolContent": "86 mg",
+    "fiberContent": "4 g",
+    "proteinContent": "49 g",
+    "saturatedFatContent": "3 g",
+    "sodiumContent": "767 mg",
+    "sugarContent": "2 g",
+    "fatContent": "16 g",
+    "servingSize": "Serves 4",
+    "unsaturatedFatContent": "0 g"
+  },
+  "author": "Daniel Gritzer",
+  "equipment": "Error: This should be implemented.",
+  "language": "en",
+  "site_name": "Serious Eats"
+}

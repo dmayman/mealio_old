@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from recipe_scrapers import scrape_html, SCRAPERS
@@ -6,7 +6,14 @@ import logging
 from typing import List, Optional, Dict, Any
 import requests
 
-app = FastAPI(title="Recipe Scraper API")
+from app.database import get_db, check_database_health
+from app.routers import recipes, meal_plans, shopping_lists, ingredients, households
+
+app = FastAPI(
+    title="Mealio API",
+    description="API for recipe management, meal planning, and shopping lists",
+    version="1.0.0"
+)
 
 # Configure CORS
 app.add_middleware(
@@ -21,12 +28,32 @@ app.add_middleware(
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Include routers
+app.include_router(households.router, prefix="/api/v1")
+app.include_router(recipes.router, prefix="/api/v1")
+app.include_router(meal_plans.router, prefix="/api/v1")
+app.include_router(shopping_lists.router, prefix="/api/v1")
+app.include_router(ingredients.router, prefix="/api/v1")
+
 class RecipeURL(BaseModel):
     url: str
 
 @app.get("/")
 async def read_root():
-    return {"message": "Recipe Scraper API is running"}
+    return {
+        "message": "Mealio API is running",
+        "version": "1.0.0",
+        "docs": "/docs"
+    }
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint."""
+    db_healthy = await check_database_health()
+    return {
+        "status": "healthy" if db_healthy else "unhealthy",
+        "database": "connected" if db_healthy else "disconnected"
+    }
 
 @app.post("/scrape")
 async def scrape_recipe(recipe_url: RecipeURL):
