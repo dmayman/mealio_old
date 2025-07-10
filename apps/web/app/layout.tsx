@@ -1,14 +1,3 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'Mealio - Recipe Scraper',
-  description: 'Extract recipes from any website',
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -16,11 +5,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
-          {children}
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

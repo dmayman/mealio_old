@@ -35,6 +35,14 @@ Buying food and cooking regularly is a burden. Many people want to be healthy an
 - **Cooking Mode (P0)**: Displays recipe instructions alongside ingredient amounts in-line for ease of use.
 - **Clear After Cooking (P0)**: Marks recipe as done and removes from queue.
 
+### 5. Households
+- Households get created once a user invites another user.
+- Recipe books show all of the recipes that belong to all users currently in a household, read and write access for all.
+- When a user leaves a household, they keep write access to all of their recipes. In addition, they keep read access to all recipes that were in the household. The household also keeps read access to all recipes that it had access to when user was in the household. 
+- When the user who left makes a new recipe, it's not accessible by the old household. Vice versa, when someone in the household makes a new recipe, it's not accessible for that user that left.
+- When the user who left joins a new household, any of the recipes in their recipe book are accessible by that new household. Therefore, it's plausible that a single recipe can be accessible by multiple households. In fact this is a good pattern for a future of publishing and sharing recipes that can be added to recipe books
+- If someone wants to edit a recipe that is now read only for reasons above, they can make a duplicate copy of it, which copies the recipe and removes their tie to the original recipe.
+
 ## Prioritization
 
 **P0 – Core MVP**
